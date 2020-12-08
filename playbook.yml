@@ -1,0 +1,22 @@
+---
+  - hosts: localhost
+    become: true
+    gather_facts: true
+    pre_tasks:
+    - name: update all repos
+      apt:
+        update_cache: yes
+        # changed_when: false
+
+    - name: Update all packages
+      apt:
+        name: "*"
+        upgrade: dist
+
+    tasks:
+      - name: Install packages
+        include: tasks/packages.yml
+
+
+
+        
