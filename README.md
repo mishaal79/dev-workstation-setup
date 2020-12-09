@@ -9,3 +9,8 @@ Current Distribution : Ubuntu
 - run playbook yml file
 - installs software tools, setup dev env
 
+Run this on VM
+
+```sh
+wget -O - https://raw.githubusercontent.com/mishaal79/dev-workstation-setup/master/init.sh | bash
+```
