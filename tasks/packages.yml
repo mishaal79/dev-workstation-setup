@@ -13,6 +13,9 @@
           - nc
           - nmap
           - build-essential
+          - docker
+          - docker-compose
+          
 
     - name: Install Joplin
       shell: >
