@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -xe
 
 # Install Ansible on Ubuntu
 if [ -n "$( uname -a | grep -i ubuntu)" ]; then
