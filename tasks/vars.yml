@@ -1,0 +1,23 @@
+apt_packages:
+  - hello
+  - zsh
+  - firefox
+  - code
+  - git
+  - python3
+  - python3-pip
+  - tmux
+  - nc
+  - nmap
+  - build-essential
+  - docker
+  - docker-compose
+  - postman
+
+python_modules:
+  - pipenv
+
+git_config:
+  - username
+  - email
+  - editor

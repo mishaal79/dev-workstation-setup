@@ -17,6 +17,9 @@
       - name: Install packages
         include: tasks/packages.yml
 
+      - name: Configure ZSH
+        include: tasks/config_zsh.yml
+
 
 
         
