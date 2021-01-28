@@ -8,7 +8,6 @@ apt_packages:
   - code
   - git
   - python3
-  - python3-pip
   - tmux
   - nc
   - nmap
@@ -17,13 +16,12 @@ apt_packages:
   - docker-compose
   - postman
   - fonts-firacode
-  - open-vm-tools
 
 python_modules:
   - pipenv
 
 git_config:
-  - username: mishaal79
+  - username: mishaal
   - email: mishaal79@gmail.com
   - editor: vim
 

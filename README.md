@@ -1,3 +1,4 @@
+![build](https://github.com/mishaal79/dev-workstation-setup/workflows/build/badge.svg)
 # Ansible automation of dev workstation
 
 Ansible version 2.9

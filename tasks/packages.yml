@@ -3,13 +3,18 @@
   apt:
     name: "{ { item } }"
     with_items: "{ { apt_packages } }"
-
-- name: Install Joplin
+- name: Upgrade pip to latest
   shell: >
-    wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
+    python -m pip install -u pip
 
 - name: Install python modules
   pip:
     name: "{ { item } }"
     with_items: "{ { python_modules } }"
     args: --user
+  become_user: "{{ username }}"
+
+- name: Install Joplin
+  shell: >
+    wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
+

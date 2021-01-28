@@ -29,9 +29,11 @@
 
       - name: Configure ZSH
         include: tasks/config_zsh.yml
+        become_user: "{{ username }}"
 
       - name: Install nvm and node LTS 
         include: tasks/config_zsh.yml
+        become_user: "{{ username }}"
 
 
 
