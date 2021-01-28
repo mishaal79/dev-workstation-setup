@@ -12,5 +12,5 @@ Current Distribution : Ubuntu
 Run this on VM
 
 ```sh
-wget -O - https://raw.githubusercontent.com/mishaal79/dev-workstation-setup/master/init.sh | sudo bash
+wget -O init.sh https://raw.githubusercontent.com/mishaal79/dev-workstation-setup/master/init.sh; sudo bash init.sh;
 ```
