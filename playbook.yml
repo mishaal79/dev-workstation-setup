@@ -3,21 +3,34 @@
     become: true
     gather_facts: true
     pre_tasks:
+    - name: add additional repos
+      ansible.builtin_apt_repository:
+        repo: universe
+        state: present
+
     - name: update all repos
       apt:
         update_cache: yes
         # changed_when: false
 
-    - name: Update all packages
+    - name: Upgrade all packages
       apt:
         name: "*"
         upgrade: dist
+    
+    - name: Update all packages to latest
+      apt:
+        name: "*"
+        state: latest
 
     tasks:
       - name: Install packages
         include: tasks/packages.yml
 
       - name: Configure ZSH
+        include: tasks/config_zsh.yml
+
+      - name: Install nvm and node LTS 
         include: tasks/config_zsh.yml
 
 

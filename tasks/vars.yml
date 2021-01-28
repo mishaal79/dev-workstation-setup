@@ -1,3 +1,6 @@
+apt_repositories:
+  - universe
+  
 apt_packages:
   - hello
   - zsh
@@ -13,11 +16,16 @@ apt_packages:
   - docker
   - docker-compose
   - postman
+  - fonts-firacode
+  - open-vm-tools
 
 python_modules:
   - pipenv
 
 git_config:
-  - username
-  - email
-  - editor
+  - username: mishaal79
+  - email: mishaal79@gmail.com
+  - editor: vim
+
+
+username: mishal

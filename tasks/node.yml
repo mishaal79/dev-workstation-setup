@@ -1,0 +1,10 @@
+- name: Install nvm
+  shell: >
+    wget -O - https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+  args:
+    creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
+  become_user: "{{ username }}"
+
+- name: Install latest node
+  shell: nvm install --lts
+
