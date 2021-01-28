@@ -1,6 +1,9 @@
 #!/bin/bash -xe
 
 # SCRIPT SHOULD BE RUNAS ROOT
+# TODO
+# Only install ansible,git if not available
+# Use dpkg query
 
 # Install Ansible on Ubuntu
 if [ -n "$( uname -a | grep -i ubuntu)" ]; then
