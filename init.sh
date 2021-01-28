@@ -10,5 +10,5 @@ if [ -n "$( uname -a | grep -i ubuntu)" ]; then
      apt update
      apt install -y ansible git
     # Pull Ansible playbook and run Install
-     ansible-pull -U https://github.com/mishaal79/dev-workstation-setup.git -i localhost playbook.yml
+     ansible-pull -U https://github.com/mishaal79/dev-workstation-setup.git -i localhost -K playbook.yml
 fi
