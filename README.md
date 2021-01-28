@@ -1,5 +1,7 @@
 # Ansible automation of dev workstation
 
+Ansible version 2.9
+
 Steps to setup dev workstation
 
 Current Distribution : Ubuntu
