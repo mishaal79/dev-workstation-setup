@@ -5,6 +5,12 @@
   - name: download and install ohmyzsh
     shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+  - name: download autosuggestions
+    shell: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+  - name: download syntax highlighting
+    shell: git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
   - name: download my zsh conf
     get_url:
       url: https://gist.githubusercontent.com/mishaal79/b56d1489c8246f6683f9fc1ac69e49ef/raw/944848c59a0af252d98f3726a5f22f4a2535b1fb/.zshrc
