@@ -1,0 +1,5 @@
+---
+  - name: update git config file
+    template:
+      src: git_config
+      dest: "{{ /home/username/.gitconfig }}"

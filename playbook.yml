@@ -1,8 +1,8 @@
 ---
-  - hosts: localhost
-    become: true
-    gather_facts: true
-    pre_tasks:
+- hosts: localhost
+  become: true
+  gather_facts: true
+  pre_tasks:
     - name: add additional repos
       apt_repository:
         repo: universe
@@ -11,30 +11,24 @@
     - name: update all repos
       apt:
         update_cache: yes
-        # changed_when: false
 
     - name: Upgrade all packages
       apt:
-        name: "*"
         upgrade: dist
-    
+
     - name: Update all packages to latest
       apt:
         name: "*"
         state: latest
 
-    tasks:
-      - name: Install packages
-        include: tasks/packages.yml
+  tasks:
+    - name: Install packages
+      include: tasks/packages.yml
 
-      - name: Configure ZSH
-        include: tasks/config_zsh.yml
-        become_user: "{{ username }}"
+    - name: Configure ZSH
+      include: tasks/config_zsh.yml
+      become_user: "{{ username }}"
 
-      - name: Install nvm and node LTS 
-        include: tasks/config_zsh.yml
-        become_user: "{{ username }}"
-
-
-
-        
+    - name: Install nvm and node LTS
+      include: tasks/config_zsh.yml
+      become_user: "{{ username }}"
