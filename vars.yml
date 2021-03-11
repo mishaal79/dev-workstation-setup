@@ -16,6 +16,10 @@ apt_packages:
   - docker-compose
   - postman
   - fonts-firacode
+  - man-db
+  - manpages-posix
+  - manpages-dev
+  - manpages-posix-dev
 
 python_modules:
   - pipenv
